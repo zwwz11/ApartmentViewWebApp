@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/fragment/head :: common_head(~{::title}, ~{::style})">
+    <title>busan</title>
+    <style>
+        h1 {
+            color: #2271b1;
+        }
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px;
+            margin: auto;
+            margin-bottom: 30px;
+            transition: all 0.2s;
+            transition-delay: 0.05s;
+            background-color: dodgerblue;
+            display: table;
+        }
+
+        .box:hover {
+            width: 320px;
+            height: 210px;
+        }
+
+        .box a {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .box a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 class="text-center"><strong>부산</strong></h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26440')}">강서구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26410')}">금정구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26710')}">기장군</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26290')}">남구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26170')}">동구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26260')}">동래구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26230')}">진구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26320')}">북구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26530')}">사상구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26380')}">사하구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26140')}">서구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26500')}">수영구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26470')}">연제구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26200')}">영도구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26110')}">중구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/busan/{LAWD_CD}(LAWD_CD='26350')}">해운대구</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

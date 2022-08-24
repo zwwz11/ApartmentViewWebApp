@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:replace="template/fragment/head :: common_head(~{::title})">
+</head>
+<body>
+    <div class="page-header" th:replace="common_header(pageHeader)">
+        <h1 class="text-center"><strong>[[${pageHeader}]]</strong></h1>
+    </div>
+</body>
+</html>
