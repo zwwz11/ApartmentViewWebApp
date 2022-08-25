@@ -1,9 +1,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <th:replace="template/fragment/head :: common_head(~{::title})">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="page-header" th:replace="common_header(pageHeader)">
+    <div class="page-header" th:fragment="common_header(pageHeader)">
         <h1 class="text-center"><strong>[[${pageHeader}]]</strong></h1>
     </div>
 </body>

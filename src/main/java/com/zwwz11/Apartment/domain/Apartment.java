@@ -39,7 +39,7 @@ public class Apartment {
     /**
      * 거래금액
      */
-    int dealAmount;
+    String dealAmount;
     /**
      * 거래(년)
      */
