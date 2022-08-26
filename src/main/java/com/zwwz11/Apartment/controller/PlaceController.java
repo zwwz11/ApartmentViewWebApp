@@ -82,15 +82,14 @@ public class PlaceController {
         int listSize = filterApartmentList.size();
         int totalCount = listSize <= 0 ? 1 : listSize;
         PageDTO pageDTO = new PageDTO(pageParam, totalCount);
-        int fromIndex = (currentPage - 1) * 20;
-        int toIndex = fromIndex + 19;
+        int fromIndex = (currentPage - 1) * pageParam.getAmount();
+        int toIndex = fromIndex + pageParam.getAmount() - 1;
         if(toIndex > totalCount - 1) {
             toIndex = Math.max(totalCount - 1, 0);
         }
         List<Apartment> subApartmentList = filterApartmentList.subList(fromIndex, toIndex);
-
         model.addAttribute("apartmentList", subApartmentList);
-        model.addAttribute("placeName", area + " " + placeName);
+        model.addAttribute("placeName", placeName);
         model.addAttribute("page", pageDTO);
         model.addAttribute("name", name);
         return "place/list";
