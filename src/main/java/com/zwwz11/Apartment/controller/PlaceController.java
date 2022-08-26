@@ -27,11 +27,37 @@ public class PlaceController {
 
     @GetMapping("/busan")
     public String busan() {
-        return "/place/busan";
+        return "place/busan";
     }
 
-    @GetMapping("/busan/{LAWD_CD}")
+    @GetMapping("/seoul")
+    public String seoul() {
+        return "place/seoul";
+    }
+
+    @GetMapping("/incheon")
+    public String incheon() {
+        return "place/incheon";
+    }
+
+    @GetMapping("/daegu")
+    public String daegu() {
+        return "place/daegu";
+    }
+
+    @GetMapping("/daejeoun")
+    public String daejeoun() {
+        return "place/daejeoun";
+    }
+
+    @GetMapping("/kwangju")
+    public String kwangju() {
+        return "place/kwangju";
+    }
+
+    @GetMapping("/{area}/{LAWD_CD}")
     public String busanDistricts(Model model
+            , @PathVariable String area
             , @PathVariable String LAWD_CD
             , @RequestParam(required = true) String placeName
             , @RequestParam(defaultValue = "1") int currentPage
@@ -53,19 +79,18 @@ public class PlaceController {
         PageParam pageParam = new PageParam();
         pageParam.setPage(currentPage);
 
-        int totalCount = filterApartmentList.size() <= 0 ? 1 : filterApartmentList.size();
+        int listSize = filterApartmentList.size();
+        int totalCount = listSize <= 0 ? 1 : listSize;
         PageDTO pageDTO = new PageDTO(pageParam, totalCount);
         int fromIndex = (currentPage - 1) * 20;
         int toIndex = fromIndex + 19;
         if(toIndex > totalCount - 1) {
-            toIndex = totalCount - 1;
-            toIndex = toIndex < 0 ? 0 : toIndex;
+            toIndex = Math.max(totalCount - 1, 0);
         }
         List<Apartment> subApartmentList = filterApartmentList.subList(fromIndex, toIndex);
 
-
         model.addAttribute("apartmentList", subApartmentList);
-        model.addAttribute("placeName", placeName);
+        model.addAttribute("placeName", area + " " + placeName);
         model.addAttribute("page", pageDTO);
         model.addAttribute("name", name);
         return "place/list";

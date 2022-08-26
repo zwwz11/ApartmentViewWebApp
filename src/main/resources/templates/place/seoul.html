@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/fragment/head :: common_head(~{::title}, ~{::style})">
+    <title>seoul</title>
+    <style>
+        h1 {
+            color: #2271b1;
+        }
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px;
+            margin: auto;
+            margin-bottom: 30px;
+            transition: all 0.2s;
+            transition-delay: 0.05s;
+            background-color: dodgerblue;
+            display: table;
+        }
+
+        .box:hover {
+            width: 320px;
+            height: 210px;
+        }
+
+        .box a {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .box a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div th:replace="~{template/fragment/page-header :: common_header('서울')}"></div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11110', placeName='종로구')}">종로구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11140', placeName='중구')}">중구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11170', placeName='용산구')}">용산구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11200', placeName='성동구')}">성동구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11215', placeName='광진구')}">광진구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11230', placeName='동대문구')}">동대문구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11260', placeName='중랑구')}">중랑구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11290', placeName='성북구')}">성북구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11305', placeName='강북구')}">강북구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11320', placeName='도봉구')}">도봉구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11350', placeName='노원구')}">노원구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11380', placeName='은평구')}">은평구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11410', placeName='서대문구')}">서대문구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11440', placeName='마포구')}">마포구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11470', placeName='양천구')}">양천구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11500', placeName='강서구')}">강서구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11530', placeName='구로구')}">구로구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11545', placeName='금천구')}">금천구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11560', placeName='영등포구')}">영등포구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11590', placeName='동작구')}">동작구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11620', placeName='관악구')}">관악구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11650', placeName='서초구')}">서초구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11680', placeName='강남구')}">강남구</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11710', placeName='송파구')}">송파구</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="box">
+                    <a th:href="@{/place/{area}/{LAWD_CD}(area='서울', LAWD_CD='11740', placeName='강동구')}">강동구</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
